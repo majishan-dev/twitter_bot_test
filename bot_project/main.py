@@ -4,7 +4,6 @@ import pytz
 from datetime import datetime
 from dotenv import load_dotenv
 
-
 # .envファイルから環境変数を読み込む
 load_dotenv()
 
@@ -23,7 +22,7 @@ client = tweepy.Client(
 
 #現在の日時情報を取得
 tz = pytz.timezone('Asia/Tokyo')
-now = datetime.now(tz).strftime('%Y-%m-%d %H:%M:%S')
+now = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
 
 # 投稿
 client.create_tweet(text=now)
