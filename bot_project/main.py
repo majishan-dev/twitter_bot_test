@@ -22,7 +22,7 @@ client = tweepy.Client(
 
 #現在の日時情報を取得
 tz = pytz.timezone('Asia/Tokyo')
-now = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+now = datetime.now(tz).strftime('%Y-%m-%d %H:%M:%S')
 
 # 投稿
 client.create_tweet(text=now)
